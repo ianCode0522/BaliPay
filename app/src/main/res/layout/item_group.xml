@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    android:backgroundTint="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Group Icon -->
+        <TextView
+            android:id="@+id/tvIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="👥"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:background="@drawable/icon_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Group Name -->
+        <TextView
+            android:id="@+id/tvGroupName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Family Savings"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            app:layout_constraintTop_toTopOf="@id/tvIcon"
+            app:layout_constraintStart_toEndOf="@id/tvIcon"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Contribution Amount -->
+        <TextView
+            android:id="@+id/tvContribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱500"
+            android:textSize="14sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvGroupName"
+            app:layout_constraintStart_toStartOf="@id/tvGroupName" />
+
+        <!-- Schedule -->
+        <TextView
+            android:id="@+id/tvSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tvContribution"
+            app:layout_constraintBottom_toBottomOf="@id/tvContribution"
+            app:layout_constraintStart_toEndOf="@id/tvContribution" />
+
+        <!-- Members Count -->
+        <TextView
+            android:id="@+id/tvMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 members"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvIcon"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
